@@ -1,8 +1,11 @@
+require('dotenv').config();
+
+
 admin = db.getSiblingDB('admin');
 
 admin.createUser({
-  user: 'xyz',
-  pwd: 'xxxxxxxx',
+  user: process.ENV.MONGO_USER_ADMIN,
+  pwd: process.ENV.MONGO_PASS_ADMIN,
   roles: [
     { role: 'userAdmin', db: 'admin' }
   ]
@@ -11,8 +14,8 @@ admin.createUser({
 db.getSiblingDB().auth('xyz', 'passwordHere');
 
 db.getSiblingDB('admin').createUser({
-  user: 'replicaAdmin',
-  pwd: 'xxxxxxx',
+  user: process.ENV.MONGO_REPLICA_ADMIN,
+  pwd: process.ENV.MONGO_PASS_REPLICA,
   roles: [
     { role: 'clusterAdmin', db: 'admin' }
   ]

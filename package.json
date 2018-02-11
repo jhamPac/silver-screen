@@ -1,0 +1,28 @@
+{
+  "name": "silver-screen",
+  "version": "1.0.0",
+  "description": "Cinema Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhamPac/silver-screen.git"
+  },
+  "keywords": [
+    "docker",
+    "nodejs",
+    "javascript",
+    "microservice"
+  ],
+  "author": "Kevia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhamPac/silver-screen/issues"
+  },
+  "homepage": "https://github.com/jhamPac/silver-screen#readme",
+  "dependencies": {
+    "dotenv": "^5.0.0"
+  }
+}
